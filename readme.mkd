@@ -1,7 +1,18 @@
 Aurora, even simpler concurrency for javascript
 ===============================================
 
-The aim is to create a simple but effective way to use concurrency in Javascript. Currently there are very few frameworks that support paralel computing in the browser. The API for the worker interface is nice and compact, but this means that you will have to implement all code yourself. 
+The aim is to create a simple but effective way to use concurrency in Javascript. The API for the worker interface is nice and compact, but this means that you will have to implement all code yourself. This framework will gie you a way to skip writing boilerplate code.
 
 Aurora is inspired by Scala and Akka Actors. 
 
+Usage example
+-------------
+
+```
+var actor = new Actor();
+actor.init();
+actor.receive(function(msg){
+		return 'replying '+msg;
+	});
+actor.send('Hello world');
+```
