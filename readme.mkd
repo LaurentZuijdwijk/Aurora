@@ -19,10 +19,10 @@ actor.receive(function(msg){
 actor.send('Hello world');
 ```
 
-In this second example we will sort an array in a seperate thread.
+In this second example we will sort an array in a separate thread.
 
 ```javascript
-var Actor = new Actor();
+var actor = new Actor();
 actor.init();
 actor.receive(function(array)
 	{
