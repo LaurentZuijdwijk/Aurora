@@ -8,7 +8,7 @@ Aurora is inspired by Scala and Akka Actors.
 Usage example
 -------------
 
-```
+```javascript
 var actor = new Actor();
 actor.init();
 actor.receive(function(msg){
