@@ -8,11 +8,26 @@ Aurora is inspired by Scala and Akka Actors.
 Usage example
 -------------
 
+In this example we will create a new Actor, set the message handling function and send it a message. It will then return this message.
+
 ```javascript
 var actor = new Actor();
 actor.init();
 actor.receive(function(msg){
-		return 'replying '+msg;
+		return msg;
 	});
 actor.send('Hello world');
+```
+
+In this second example we will sort an array in a seperate thread.
+
+```javascript
+var Actor = new Actor();
+actor.init();
+actor.receive(function(array)
+	{
+		return array.sort();
+	}
+);
+actor.send([2,6,4,10,3,7]);
 ```
